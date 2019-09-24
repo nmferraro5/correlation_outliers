@@ -1,6 +1,6 @@
 # correlation_outliers
 Identifying outlier samples in situations with multiple data measurements per sample based on the Mahalanobis distance from the measurement covariance matrix per sample. Applied in gene expression outlier calling where each gene has measurements across many tissues.
-The method is further described in this publication: coming soon
+The method is further described in this publication: coming soon.
 Data used for development is available as part of the Genotype Tissue Expression (GTEx) project v8: https://gtexportal.org/home/. 
 We recommend filtering samples with high missingness prior to outlier calls to prevent sparsity issues.
 This code was originally written by Emily Tsang and Joe Davis and has been updated/modified by Nicole Ferraro for use in the above publication and release here.
