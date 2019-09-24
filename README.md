@@ -18,7 +18,7 @@ This code was originally written by Emily Tsang and Joe Davis and has been updat
 * robustbase
 
 ## Set up directories
-Data file should be a gzipped file in the format of Gene, Tissue/Data type, Samp1, Samp2, ...
+Data file should be a gzipped file in the format of Gene, Tissue/Data type, Samp1, Samp2, ... (example in toy_data folder)
 Data directory leads to where the original data is stored and output directory where to write the output files
 
 ```
