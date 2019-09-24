@@ -1,8 +1,6 @@
 #!/usr/bin/env Rscript
 
 # Load required packages
-#require(Matrix)
-#require(matrixStats)
 require(impute)
 
 # Function to impute missing data using KNN and then estimate precision matrix 
