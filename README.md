@@ -18,6 +18,9 @@ This code was originally written by Emily Tsang and Joe Davis and has been updat
 * robustbase
 
 ## Set up directories
+Data file should be a gzipped file in the format of Gene, Tissue/Data type, Samp1, Samp2, ...
+Data directory leads to where the original data is stored and output directory where to write the output files
+
 ```
 DATADIR=[insert]
 DATAFILE=[insert]
@@ -40,7 +43,6 @@ Generates an RData file containing the parameters tested and the values that min
 
 ## Generate outlier statistics
 * Requires path to data file, prefix for output, selected imputation method (valid = KNN, EM, MEAN, PMD, SOFT), minimum number of measurements needed per sample, number of cores (default = 1), and nominal outlier p-value threshold
-* Data file should be gzipped file in the format Gene, Tissue/Data type, Samp1, Samp2, ...
 * Either set parameters from above results, or however you prefer, and set here
 * Optional parameter settings for chosen method (defaults chosen from GTEx use case):
 	*	EM - max iterations (EM.MAX.IT, default = 2) and tolerance (EM.TOL, default = 1e-6)
