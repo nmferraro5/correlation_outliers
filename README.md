@@ -63,7 +63,7 @@ Rscript call_outliers.R \
 Generates a file with outlier statistics, including Sample ID, gene, number of individuals tested, number of measurements/tissues for that sample, mahalanobis distance, log p-value, p-value, bonferroni-corrected p-value, and FDR corrected p-value. Also includes a column indicating if the sample is an outlier at the nominal threshold, but additional thresholds can be defined downstream.
 
 ## Assign outliers to specific group
-* Requires outlier file, output file, original data file (same as above), a threshold for determining a single measurement change and an outlier FDR threshold
+* Requires outlier file, output file, original data file (same as above), a threshold for determining a single measurement change (assumes absolute value) and an outlier FDR threshold
 * Considers all groups as separate, may want to collapse related, i.e. different Brain regions -> Brain
 ```
 Rscript filter_specific_outliers.R \
