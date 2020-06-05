@@ -17,6 +17,35 @@ This code was originally written by Emily Tsang (https://github.com/ektsang) and
 * stringr
 * reshape2
 * robustbase
+* Matrix
+* mvtnorm
+* matrixStats
+* mvnmle
+* psych
+* PMA
+* softImpute
+* impute
+
+## Testing environment
+* R 3.6.0 
+* data.table (1.12.8)
+* dplyr (0.8.5)
+* ggplot2 (3.3.0)
+* argparse (2.0.1)
+* optparse (1.6.4)
+* doMC (1.3.6)
+* foreach (1.4.8)
+* stringr (1.4.0)
+* reshape2 (1.4.3)
+* robustbase (0.93-5)
+* Matrix (1.2-18)
+* mvtnorm (1.1-0)
+* matrixStats (0.56.0)
+* mvnmle (0.1-11.1)
+* psych (1.9.12.31)
+* PMA (1.2.1)
+* softImpute (1.4)
+* impute (1.60.0)
 
 ## Set up directories
 Data file should be a gzipped file in the format of Gene, Tissue/Data type, Samp1, Samp2, ... (example in toy_data folder)
