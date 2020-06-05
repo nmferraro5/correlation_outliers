@@ -1,9 +1,10 @@
 # correlation_outliers
 Identifying outlier samples in situations with multiple data measurements per sample based on the Mahalanobis distance from the measurement covariance matrix per sample. Applied in gene expression outlier calling where each gene has measurements across many tissues.
-The method is further described in this publication: coming soon.
+The method is further described in this publication: Ferraro, N. M., Strober, B. J., Einson, J., Li, X., Aguet, F., Barbeira, A. N., ... & Park, Y. (2019). Diverse transcriptomic signatures across human tissues identify functional rare genetic variation. bioRxiv, 786053.
+
 Data used for development is available as part of the Genotype Tissue Expression (GTEx) project v8: https://gtexportal.org/home/. 
 We recommend filtering samples with high missingness prior to outlier calls to prevent sparsity issues.
-This code was originally written by Emily Tsang and Joe Davis and has been updated/modified by Nicole Ferraro for use in the above publication and release here.
+This code was originally written by Emily Tsang (https://github.com/ektsang) and Joe Davis (https://github.com/joed3) and has been updated/modified by Nicole Ferraro for use in the above publication and release here.
 
 ## Required R packages
 * data.table
@@ -60,7 +61,7 @@ Rscript call_outliers.R \
         --PTHRESH=0.0027 \
 	--KNN.K=200
 ```
-Generates a file with outlier statistics, including Sample ID, gene, number of individuals tested, number of measurements/tissues for that sample, mahalanobis distance, log p-value, p-value, bonferroni-corrected p-value, and FDR corrected p-value. Also includes a column indicating if the sample is an outlier at the nominal threshold, but additional thresholds can be defined downstream.
+Generates a file with outlier statistics, including Sample ID, gene, number of individuals tested, number of measurements/tissues for that sample, mahalanobis distance, log p-value, p-value, bonferroni-corrected p-value, and FDR corrected p-value. Also includes a column indicating if the sample is an outlier at the nominal threshold, but additional thresholds can be defined downstream. Example in toy_data folder for a few genes.
 
 ## Assign outliers to specific group
 * Requires outlier file, output file, original data file (same as above), a threshold for determining a single measurement change (assumes absolute value) and an outlier FDR threshold
@@ -73,4 +74,4 @@ Rscript filter_specific_outliers.R \
         --THRESH=3 \
         --FDR=0.001
 ```
-Generates a file similar to the outlier file above, but with additional columns indicating if one measurement/tissue is driving the signal and the maximum value across all measurements. These are NA for controls or if no single measurement is driving the outlier call.
+Generates a file similar to the outlier file above, but with additional columns indicating if one measurement/tissue is driving the signal and the maximum value across all measurements. These are NA for controls or if no single measurement is driving the outlier call. Example in toy_data folder for a few genes.
